@@ -34,6 +34,7 @@ header {
     background-color: white;
     border: 1px solid #e6e6e6;
     border-top: none;
+    z-index: 9999;
 
 }
 
@@ -46,11 +47,11 @@ header .box {
     height: 30px;
 }
 
-.green {
+.lime {
     background-color: #588c7e;
 }
 
-.yellow {
+.lemon {
     background-color: #f2e393;
 }
 
@@ -267,6 +268,7 @@ footer {
     border-bottom: none;
     text-align: center;
     float: right;
+    z-index: 9999;
 }
 
 footer div {
