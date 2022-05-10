@@ -1,65 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>maddison nielsen</title>
-    <link rel="stylesheet" href="home.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,200;0,400;0,700;0,900;1,200;1,400;1,700&display=swap" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100;0,400;0,900;1,100;1,400&family=Zilla+Slab:wght@700&display=swap" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css"> 
+  <meta charset="UTF-8">
+  <title>maddison nielsen // graphic design</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="infinity.css">
+  <link rel="stylesheet" href="utils.css">
+  <link rel="stylesheet" href="index.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <!-- fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
 
-<!----------header---------->
+  <header>
 
-    <header>
-        <div class="box lime"></div>
-        <div class="box lemon"></div>
-        <div class="box orange"></div>
-        <div class="box grapefruit"></div>
-        <h1><a href="index.html">maddison nielsen</a></h1>
-
-<!----------nav---------->       
-
-        <nav>
-            <a href="index.html" data-title="home"><span class="lnr lnr-star"></span></a>
-            <a href="about.html" data-title="about"><span class="lnr lnr-user"></span></a>
-            <a href="portfolio.html" data-title="work"><span class="lnr lnr-briefcase"></span></a>
-            <a href="https://www.redbubble.com/people/myndirnotur/shop" data-title="shop"><span class="lnr lnr-cart"></span></a>
-        </nav>
-
-    </header>
-
-<!----------main---------->
-    
-    <main>
-        
-    <div class=container>
-        <h1><i>“New mysteries. New day.<br>&emsp;Fresh doughnuts.”</i></h1><br>
-        <h2><b>--DAVID LYNCH</b></h2>
-        <br><br><br>
-        <p>maddison is a writer, designer, and artist based in los angeles.</p>
-        <p>this website is under construction.</p><br>
-        <div class="navigation">
-            <a href="about.html">biography</a><br>
-            <a href="portfolio.html">portfolio</a><br>
-            <a href="https://www.redbubble.com/people/myndirnotur/shop">shop</a><br>
-            <a href="contact.html">contact</a><br>
+    <div class="px-4 py-5 puter tablet celly text-center d-block w-100 mx-auto" style="z-index: 1;" data-background-role="hero">
+      <img class="d-block mx-auto mb-4" src="img/logo.svg" alt="Maddison" id="logo" data-background-role="toggle">
+      <h1 class="display-6 my-4">digital illustration ✤ web design ✤ graphic design</h1>
+      <div class="col-lg-6 mx-auto my-4">
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+          <button type="button btn" onclick="window.location.href='bio.html'" class="button my-2">Biography</button>
+          <button type="button btn" onclick="window.location.href='portfolio.html'" class="button my-2">Portfolio</button>
+          <button type="button btn" onclick="window.location.href='resume.html'" class="button my-2">Resume</button>
         </div>
     </div>
+  
+  </header>
 
-    <div class=container>
-        <div class=la></div><div class=me data-title="photo by garrett mitchell"></div>
-    </div>
+  <main>
+    <div style="z-index: 0;">
+      <div data-background-role="wrapper"></div>
 
-    </main>
+  </main>
 
-<!----------footer---------->
+  <!-- scripts -->
+  <script id="shader--vertex" type="x-shader/x-vertex">
+    varying vec2 vUv; 
 
-    <footer>
-<div>copyright © 2020 maddison nielsen <a href="contact.html">contact</a></div>
-    </footer>
+void main() {
+    vUv = uv;
+
+    vec4 mvPosition = modelViewMatrix * vec4(position, 1.0 );
+    gl_Position = projectionMatrix * mvPosition;
+}
+</script>
+  <script id="shader--fragment" type="x-shader/x-fragment">
+    uniform vec2 iResolution;
+uniform float animationTime;
+uniform vec3 color1;
+uniform vec3 color2;
+uniform float progress;
+uniform float size;
+
+varying vec2 vUv; 
+
+void main() {
+    vec2 a = vec2( iResolution.x / iResolution.y, 1);
+    vec2 c = gl_FragCoord.xy / iResolution.xy * a * size + animationTime * .3;
+
+	float k = .1 + cos(c.y + sin(.148 - animationTime)) + 2.4 * animationTime;
+	float w = .9 + sin(c.x + cos(.628 + animationTime)) - 0.7 * animationTime;
+	float d = length(c);
+	float s = 7. * cos(d+w) * sin(k+w);
+	
+	vec3 patternColor = vec3( 0.5 + 0.5 * cos( s + vec3( 0.5, 0.5, 0.5 ) ) );
+
+    vec3 color = vec3( 0.5, 0.5, 0.5 );
+    if( (
+        patternColor.x
+      + patternColor.y
+      + patternColor.z ) / 3.0 > progress ) {
+        color = color1;
+    } else {
+        color = color2;
+    }
+    
+    gl_FragColor = vec4( color, 1.0 );
+}
+</script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+  </script>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/95/three.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenLite.min.js'></script>
+  <script src="infinity.js"></script>
+
 </body>
+
 </html>

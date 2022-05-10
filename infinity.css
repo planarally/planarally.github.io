@@ -1,0 +1,24 @@
+[data-background-role="wrapper"] {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+[data-background-role="progress"] {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  width: 16rem;
+  margin: 2rem auto;
+}
+[data-background-role="toggle"] {
+  position: block;
+}
+[data-background-role="hero"] {
+  position: fixed;
+  display: block;
+  margin: auto;
+}
