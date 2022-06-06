@@ -2,14 +2,6 @@ https://codepen.io/ifelipesilva/pen/yLNeoBM
 
 https://codepen.io/superstructure-net/pen/pOvoGG
 
-<div class="container w-100 w-md-75 w-lg-66 d-block mx-auto" data-background-role="hero">
-<div class="row">
-title stuff
-</div>
-<div class="row">
-<div class="col-12 col-lg-6">bio</div>
-<div class="col-12 col-lg-6">pics</div>
-</div>
-<div class="row">
-links
-</div>
+https://codepen.io/abdlkhn/pen/eYJPZYG
+
+https://codepen.io/piyushpd139/pen/gOYvZPG
