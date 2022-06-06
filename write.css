@@ -1,0 +1,71 @@
+
+#maddi {
+    position: absolute;
+    top: 8%;
+    left: 6%;
+    transform: translate(-3%, -50%);
+}
+
+#maddi text {
+    font-size: 15rem;
+    stroke-dasharray: 3958px;
+    stroke-dashoffset: 3958px;
+    animation: line-anim 8.5s ease forwards 0.5s;
+}
+
+
+#meet {
+    position: absolute;
+    top: 12%;
+    left: 6%;
+    transform: translate(5%, -50%);
+}
+
+#meet text {
+    font-size: 10rem;
+    stroke-dasharray: 3958px;
+    stroke-dashoffset: 3958px;
+    animation: line-anim 8.5s ease forwards 0.5s;
+}
+
+@keyframes line-anim {
+    from {
+        fill: transparent;
+    }
+    to {
+        stroke-dashoffset: 0;
+        fill: #59A96A;
+    }
+}
+
+/* MED SCREENS (IPAD, HORIZONTAL PHONE) */
+@media (min-width: 768px){
+
+    #meet {
+        top: 15%;
+    }
+
+ }
+
+
+/* LARGE SCREENS (DESKTOP) */
+
+@media (min-width: 1196px){ 
+
+    #maddi {
+        top: 10%;
+        left: 24%;
+    }
+
+    #maddi text {
+        font-size: 10rem;
+    }
+
+    #meet {
+        top: 20%;
+        left: 19%;
+    }
+    #meet text {
+        font-size: 7rem;
+    }
+}
