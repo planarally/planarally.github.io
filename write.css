@@ -1,71 +1,98 @@
-
-#maddi {
-    position: absolute;
-    top: 8%;
-    left: 6%;
-    transform: translate(-3%, -50%);
+.heading {
+    font-size: 1.7rem;
+    font-family: corn-dog, sans-serif !important;
+    font-weight: 400;
+    font-style: normal;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    display: flex;
+    flex-direction: column;
 }
 
-#maddi text {
-    font-size: 15rem;
-    stroke-dasharray: 3958px;
-    stroke-dashoffset: 3958px;
-    animation: line-anim 8.5s ease forwards 0.5s;
+.heading>div {
+    overflow: hidden;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    white-space: nowrap;
+    margin: 0;
+    line-height: 117%;
 }
 
-
-#meet {
-    position: absolute;
-    top: 12%;
-    left: 6%;
-    transform: translate(5%, -50%);
+.green {
+    color: #E861A4;
+    font-size: 2.2rem;
 }
 
-#meet text {
-    font-size: 10rem;
-    stroke-dasharray: 3958px;
-    stroke-dashoffset: 3958px;
-    animation: line-anim 8.5s ease forwards 0.5s;
+div.heading>div {
+    -webkit-animation-delay: 0;
+    animation-delay: 0;
 }
 
-@keyframes line-anim {
-    from {
-        fill: transparent;
+div.heading>div:nth-child(2)>p {
+    -webkit-animation-delay: 0.05s;
+    animation-delay: 0.05s;
+}
+
+div.heading>div {
+    -webkit-animation-delay: 0;
+    animation-delay: 0;
+}
+
+div.heading>div:nth-child(3)>p {
+    -webkit-animation-delay: 0.075s;
+    animation-delay: 0.075s;
+}
+
+.slide-up {
+    -webkit-animation: slide-up 0.9s cubic-bezier(0.65, 0, 0.35, 1) both;
+    animation: slide-up 0.9s cubic-bezier(0.65, 0, 0.35, 1) both;
+}
+
+@-webkit-keyframes slide-up {
+    0% {
+        transform: translateY(100px);
     }
-    to {
-        stroke-dashoffset: 0;
-        fill: #59A96A;
+
+    100% {
+        transform: translateY(0);
     }
 }
 
-/* MED SCREENS (IPAD, HORIZONTAL PHONE) */
-@media (min-width: 768px){
-
-    #meet {
-        top: 15%;
+@keyframes slide-up {
+    0% {
+        transform: translateY(100px);
     }
 
- }
+    100% {
+        transform: translateY(0);
+    }
+}
 
+@media (min-width: 768px) {
 
-/* LARGE SCREENS (DESKTOP) */
-
-@media (min-width: 1196px){ 
-
-    #maddi {
-        top: 10%;
-        left: 24%;
+    .heading {
+        font-size: 2.7rem;
     }
 
-    #maddi text {
-        font-size: 10rem;
+    .green {
+        color: #E861A4;
+        font-size: 4.2rem;
     }
 
-    #meet {
-        top: 20%;
-        left: 19%;
+}
+
+@media (min-width: 1080px) {
+
+    .heading {
+        font-size: 2.7rem;
+        position: relative;
+        left: 39%;
     }
-    #meet text {
-        font-size: 7rem;
+
+    .green {
+        color: #E861A4;
+        font-size: 4.2rem;
     }
 }

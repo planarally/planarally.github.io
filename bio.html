@@ -20,25 +20,30 @@
 
 <body>
 
-  <header >
+  <header>
 
-    <div class="container white position-absolute top-72 start-50 translate-middle lg-container p-md-3" data-background-role="hero">
-
-      <svg id="maddi" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 859.95">
-        <text  transform="translate(100 457.97)" fill="none" stroke="#59A96A" stroke-miterlimit="10" stroke-width="3" font-family="corn-dog, sans-serif" font-weight="700">I'm Maddison.</text>
-        </svg>
-
-
-        <svg id="meet" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 859.95">
-          <text  transform="translate(100 457.97)" fill="none" stroke="#59A96A" stroke-miterlimit="10" stroke-width="3" font-family="corn-dog, sans-serif" font-weight="700">Nice to meet you!</text>
-          </svg>
-
-        <div class="w-100 w-lg-50 d-lg-inline-block p-2 h-500 h-lg-auto">
-          <img id="me" src="img/me.png">
-          <img id="me2" src="img/me2.png">
+    <div class="container d-block position-static w-100 mx-auto py-2 bio white" data-background-role="hero">
+      <div class="row py-3 ms-2">
+        <div class="col-12;">
+          <div class="heading">
+            <div>
+              <div class="slide-up"><span class="green">Hi, I'm Maddison</span>.</div>
+            </div>
+            <div>
+              <div class="slide-up">So nice to meet you!</div>
+            </div>
+          </div>
         </div>
+      </div>
 
-        <div class="w-md-75 w-lg-40 d-lg-inline-block mx-auto p-3 p-lg-4 my-lg-6 ms-lg-5 white" >
+      <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-6 py-sm-3 py-md-2">
+          <div class="img-wrap">
+            <img id="me" src="img/me.png">
+            <img id="me2" src="img/me2.png"></div>
+        </div>
+        <div class="col-12 col-lg-6 p-5">
           <p>
             As a graphic designer, Maddison has come a long way since building Angelfire websites on her mom’s clunky
             Dell computer in 2003.<br><br>
@@ -52,22 +57,24 @@
             thriving freelance practice.
           </p>
         </div>
+      </div>
 
-        <div class="d-grid gap-1 d-flex justify-content-center">
+      <!-- Columns are always 50% wide, on mobile and desktop -->
+      <div class="d-flex flex-row justify-content-center my-3 my-lg-5
+      ;">
+        <div class="p-2">
           <button type="button btn" onclick="window.location.href='portfolio.html'"
-            class="button my-2">Portfolio</button>
-
-          <button type="button btn" onclick="window.location.href='resume.html'" class="button my-2">Resume</button>
+            class="button">Portfolio</button>
         </div>
-
+        <div class="p-2">
+          <button type="button btn" onclick="window.location.href='resume.html'" class="button">Resume</button>
+        </div>
       </div>
 
   </header>
 
   <main>
-    <div style="z-index: 0;">
-      <div data-background-role="wrapper" ></div>
-
+    <div data-background-role="wrapper" style="z-index: -1;"></div>
   </main>
 
   <!-- scripts -->
