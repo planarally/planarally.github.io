@@ -1,1 +1,22 @@
 @import url(nav.css);
+@import url(button2.css);
+
+* {
+    font-family: 'Lato', sans-serif;
+}
+
+.card {
+    border-radius: 15px !important;
+    border-color: #59A96A !important;
+}
+
+.card img {
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+}
+
+  .card-title {
+      font-family: 'Koulen', cursive;
+      font-size: 2rem;
+      text-transform: capitalize;
+  }

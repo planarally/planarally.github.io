@@ -1,23 +1,24 @@
 @import url(write.css);
 @import url(infinity.css);
-@import url(button.css);
+@import url(button3.css);
 
 
-.bio {
-    height: 260vw;
+.container {
+    height: 100%;
 }
 
 img {
-    width: 70vw;
+    width: 50vw;
     z-index: 2;
+    border-radius: 15px;
 }
 
 .img-wrap {
-    height: 30vh;
+    height: 50vw;
 }
 
 #me {
-    left: -100px;
+    left: -10%;
     animation-name: appear;
     animation-duration: 2s;
     animation-fill-mode: both;
@@ -31,7 +32,7 @@ img {
 }
 
 #me2 {
-    left: 30px;
+    left: 10%;
     animation-name: appear2;
     animation-duration: 2s;
     animation-fill-mode: both;
@@ -73,27 +74,30 @@ img {
 }
 
 /* MED SCREENS (IPAD, HORIZONTAL PHONE) */
-@media (min-width: 432px) {
+@media (min-width: 500px) {
 
-    .bio {
-        height: 103vw;
+
+    .container {
+        height: 100vh;
     }
 
     img {
         width: 30%;
     }
 
-    #me {
-        left: 6%;
-        animation-name: appear2;
-    }
-
-    #me2 {
-        left: 40%;
-    }
 
     .img-wrap {
+        position: relative;
         height: 20vh;
+    }
+
+    #me {
+        left: 0%;
+        animation-name: appear2;
+
+    }
+
+    #me2 {  left: 35%;
     }
 
 
@@ -104,31 +108,13 @@ img {
 
 @media (min-width: 1080px) {
 
-    .bio {
-        height: 45vw;
-    }
+    body {
+        height: 100vh;
+        width: 100vw;
+      }
 
-    img {
-        width: 25vw;
-    }
-
-    #me {
-        left: 3%;
-        top: 10%;
-    }
-
-    #me2 {  left: 18%;
-        top: 26%;
-    }
-
-
-}
-
-@media (min-width: 1196px) {
-
-
-    .bio {
-        height: 70vh;
+    .container {
+        height: 100vh;
     }
 
     img {
@@ -136,12 +122,14 @@ img {
     }
 
     #me {
-        left: 14%;
-        top: 10%;
+        left: -10%;
+        top: 120%;
     }
 
-    #me2 {  left: 24%;
-        top: 26%;
+    #me2 {  left: 30%;
+        top: 20%;
     }
+
+
 
 }
