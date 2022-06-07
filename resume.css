@@ -1,0 +1,38 @@
+@import url(button.css);
+
+
+body {
+    background-color: rgb(255,255,255);
+    animation-name: colorchange;
+    animation-duration: 25s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+}
+    @keyframes colorchange{
+        0%{background-color: #e4eeff;}
+        20%{background-color: #f1e8ec;}
+        40%{background-color: #f9f7df;}
+        60%{background-color: #eaf9df;}
+        80%{background-color: #dfe9f9;}
+        100%{background-color: #e4eeff;}
+}
+
+.resume {
+    width: 100%
+}
+
+.buttonss {
+    height:320px;
+}
+
+@media (min-width: 768px){
+
+    .resume {
+        width: 80%
+    }
+    
+    .buttonss {
+        height:120px;
+    }
+
+}

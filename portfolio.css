@@ -5,9 +5,24 @@
     font-family: 'Lato', sans-serif;
 }
 
+h3 {
+
+    font-family: corn-dog, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    -webkit-text-stroke: 2px black;
+    -webkit-text-fill-color: white;
+    
+}
+
 .card {
     border-radius: 15px !important;
     border-color: #59A96A !important;
+}
+
+.ill {
+    border-radius: 0px !important;
+    border-width: 0px !important;
 }
 
 .card img {
@@ -15,8 +30,20 @@
 	border-top-right-radius: 15px;
 }
 
+.ill img {
+    border-radius: 0px !important;
+}
+
   .card-title {
       font-family: 'Koulen', cursive;
       font-size: 2rem;
       text-transform: capitalize;
+  }
+
+  .modalimg{
+      width:100%;
+  }
+
+  .tansoda{
+      height: 600px;
   }
