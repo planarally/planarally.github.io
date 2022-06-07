@@ -18,6 +18,7 @@ h3 {
 .card {
     border-radius: 15px !important;
     border-color: #59A96A !important;
+    margin-bottom: 2rem;
 }
 
 .ill {
@@ -47,3 +48,15 @@ h3 {
   .tansoda{
       height: 600px;
   }
+
+  .btn-secondary {
+      border-width: 0px !important;
+      border-radius: 50% !important;
+      background-color: #E861A4 !important;
+  }
+
+  
+  .btn-secondary:hover {
+    border-radius: 50% !important;
+    background-color: #bb4c83 !important;
+}
