@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>maddison nielsen // graphic design</title>
+  <title>IXD MADDI</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel="stylesheet" href="utils.css">
@@ -13,89 +13,46 @@
   <!-- fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.typekit.net/dls7fbb.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
 
 </head>
 
 <body>
-
+<div class="frame">
   <header>
-
-    <div class="px-4 py-5 puter tablet celly text-center d-block w-100 mx-auto" style="z-index: 1;"
-      data-background-role="hero">
-      <img class="d-block mx-auto mb-4" src="img/logo.svg" alt="Maddison" id="logo" data-background-role="toggle">
-      <h1 class="display-6 my-4">digital illustration ✤ web design ✤ graphic design</h1>
-      <div class="col-lg-6 mx-auto my-4">
-        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-          <button type="button btn" onclick="window.location.href='bio.html'" class="button my-2">Biography</button>
-          <button type="button btn" onclick="window.location.href='portfolio.html'"
-            class="button my-2">Portfolio</button>
-          <button type="button btn" onclick="window.location.href='resume.html'" class="button my-2">Resume</button>
+    <div class="cont text-center d-block mx-auto position-absolute top-50 start-50 translate-middle" style="z-index: 1;">
+        <img class="d-block mx-auto mb-4" src="img/logo.svg" alt="Maddison" id="logo" data-background-role="toggle">
+        <h1 class="display-6 my-4">✤ interaction design ✤ illustration ✤</h1>
+        <div class="col-lg-6 mx-auto my-4">
+          <div class="d-flex flex-row justify-content-evenly align-items-center">
+              
+              <div class="portbtnholder"><button type="button" onclick="window.location.href='portfolio.html'"
+              class="portbutton my-2">Portfolio</button></div>
+  
+              <div class="igbtnholder"><button type="button" onclick="window.location.href='instagram.com/maddinielsen'"
+            class="igbutton my-2"><i class="bi bi-instagram text-light"></i></button></div>
+  
+            <div class="portbtnholder"><button type="button" onclick="window.location.href='about.html'"
+              class="portbutton my-2">About Me</button></div>
         </div>
-      </div>
-
   </header>
 
   <main>
-    <div style="z-index: 0;">
-      <div data-background-role="wrapper"></div>
-    </div>
+
+        
+      <div class="wrap" style="z-index: -1;"></div>
   </main>
 
-  <!-- scripts -->
-  <script id="shader--vertex" type="x-shader/x-vertex">
-    varying vec2 vUv; 
 
-void main() {
-    vUv = uv;
+  <script src="libs/bootstrap/bootstrap.min.js"></script>
+  <script src="libs/jQuery/jquery.min.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js'></script>
+  <script src="libs/blobs/bg.js"></script>
 
-    vec4 mvPosition = modelViewMatrix * vec4(position, 1.0 );
-    gl_Position = projectionMatrix * mvPosition;
-}
-</script>
-  <script id="shader--fragment" type="x-shader/x-fragment">
-    uniform vec2 iResolution;
-uniform float animationTime;
-uniform vec3 color1;
-uniform vec3 color2;
-uniform float progress;
-uniform float size;
-
-varying vec2 vUv; 
-
-void main() {
-    vec2 a = vec2( iResolution.x / iResolution.y, 1);
-    vec2 c = gl_FragCoord.xy / iResolution.xy * a * size + animationTime * .3;
-
-	float k = .1 + cos(c.y + sin(.148 - animationTime)) + 2.4 * animationTime;
-	float w = .9 + sin(c.x + cos(.628 + animationTime)) - 0.7 * animationTime;
-	float d = length(c);
-	float s = 7. * cos(d+w) * sin(k+w);
-	
-	vec3 patternColor = vec3( 0.5 + 0.5 * cos( s + vec3( 0.5, 0.5, 0.5 ) ) );
-
-    vec3 color = vec3( 0.5, 0.5, 0.5 );
-    if( (
-        patternColor.x
-      + patternColor.y
-      + patternColor.z ) / 3.0 > progress ) {
-        color = color1;
-    } else {
-        color = color2;
-    }
-    
-    gl_FragColor = vec4( color, 1.0 );
-}
-</script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-  </script>
-  <script src="libs/jquery-3.6.0.min.js"></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/95/three.min.js'></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenLite.min.js'></script>
-  <script src="infinity.js"></script>
-  
+</div>
 
 </body>
 

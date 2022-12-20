@@ -1,33 +1,23 @@
-@import url(infinity.css);
-@import url(button.css);
+@import url(navbtn.css);
+@import url(bgsplash.css);
 
 #logo {
     width: 80vw;
 }
 
-
-.celly {
-    margin-top: 4rem !important;
+.cont {
+width: 90%;
 }
-
 
 @media (min-width: 768px){
 
-.tablet {
-    margin-top: 11rem !important;
-}
-
-    .button {
-        margin: 20px;
-      }
+    .cont {
+        width: 100%;
+        }
 
 }
 
 @media (min-width: 1196px){
-
-    .puter {
-        margin-top: 5rem !important;
-    }
 
     #logo {
         width: 60vw;

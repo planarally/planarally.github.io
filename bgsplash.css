@@ -1,0 +1,29 @@
+
+body {
+	background: #00ffff;
+}
+
+.frame{
+	overflow: hidden;
+}
+
+.wrap {
+	background: #00ffff;
+	bottom: 0;
+	filter: blur(10px) contrast(30);
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	overflow: hidden;
+}
+
+.orb {
+	background: #00ff00;
+	border-radius: 50%;
+	box-sizing: border-box;
+	left: 0;
+	position: absolute;
+	top: 0;
+	will-change: transform;
+}

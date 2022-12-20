@@ -1,0 +1,50 @@
+
+body {
+	background: #00ffff;
+}
+
+
+.wrap {
+	background: #00ffff;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    height:210px;
+	bottom: 0;
+	filter:contrast(30);
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	overflow: hidden;
+	border-radius: 50px 50px 30px 30px;
+}
+
+.orb {
+	background: #00ff00;
+	border-radius: 50%;
+	box-sizing: border-box;
+    filter:blur(10px);
+	left: 0;
+	position: absolute;
+	top: 0;
+	will-change: transform;
+}
+
+
+
+@media (min-width: 768px){
+
+    .wrap {
+        height: 180px;
+        }
+
+}
+
+@media (min-width: 1196px){
+    .wrap {
+        height: 120px;
+        width: 70%;
+        }
+}

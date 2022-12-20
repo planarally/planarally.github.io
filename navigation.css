@@ -1,0 +1,42 @@
+@import url(navbtn.css);
+@import url(bg.css);
+
+
+
+.cont {
+width: 90%;
+}
+
+#logo {
+    height: 120px;
+    width: auto;
+}
+
+.line-break {
+    width: 100%;
+  }
+
+@media (min-width: 768px){
+
+    .cont {
+        width: 100%;
+        }
+
+        #logo {
+            height: 150px;
+            width: auto;
+        }
+        
+
+}
+
+@media (min-width: 1196px){
+
+
+    #logo {
+        height: 100px;
+        width: auto;
+    }
+    
+
+}
