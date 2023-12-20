@@ -1,0 +1,99 @@
+.sectionheader {
+    height: 100px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.overlay-box:before {
+    position: absolute;
+    content: "";
+    left: 0px;
+    top: -450px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    opacity: 0;
+    transition: all 1s;
+    background-color: rgba(0, 255, 255, 0.6);
+}
+
+.inner-box {
+    position: relative;
+}
+
+.inner-box .image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 50px 50px 30px 30px;
+}
+
+.inner-box .image img {
+    position: relative;
+    width: 100%;
+    display: block;
+    transition: all 1s;
+}
+
+.inner-box .image .overlay-box {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    display: block;
+    overflow: hidden;
+}
+
+.overlay-inner {
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    z-index: 1;
+    padding: 10px 30px;
+    background: #E861A4;
+    border-radius: 50px 50px 30px 30px;
+    color: rgba(255, 255, 255, 0.8);
+    transition: all 1s;
+}
+
+.overlay-inner .h {
+    font-size: 20px;
+    margin-top: 5px;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.overlay-inner .p {
+    font-size: 14px;
+    margin-top: 2px;
+    text-transform: uppercase;
+}
+
+.overlay-inner:hover {
+    background: rgba(255, 255, 255, 0.9);
+    color: #000;
+}
+
+.inner-box:hover .image img {
+    transform: scale(1.1);
+}
+
+.inner-box:hover .image .overlay-box:before {
+    opacity: 1;
+    top: 0;
+    transition: all 1s;
+}
+
+.inner-box:hover .image .overlay-box {
+    opacity: 1;
+}
+
+.inner-box:hover .overlay-inner {
+    background: rgba(255, 255, 255, 0.9);
+    color: #000;
+    transition: all 1s;
+}
+
+.inner-box:hover {
+    transform: translateY(0);
+}

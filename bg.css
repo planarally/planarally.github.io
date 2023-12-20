@@ -6,9 +6,9 @@ body {
 
 .wrap {
 	background: #00ffff;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
     margin-top: 10px;
     height:210px;
 	bottom: 0;
@@ -38,6 +38,8 @@ body {
 
     .wrap {
         height: 180px;
+		margin-left: auto;
+		margin-right: auto;
         }
 
 }
