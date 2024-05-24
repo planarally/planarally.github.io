@@ -31,6 +31,41 @@
   translate: 0px 10px;
   }
 
+
+  .bigbtnholder {
+    height: 50px;
+    width: 200px;
+    text-align: center;
+}
+
+.bigbutton {
+    margin: auto;
+    width: 200px;
+    height: 45px;
+    font-family: 'Lato', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 700;
+    color: #fff;
+    background-color: #E861A4;
+    border: none;
+	border-radius: 50px 50px 30px 30px;
+    transition: ease-in-out .5s;
+    cursor: pointer;
+    outline: none;
+    }
+  
+  .bigbutton:hover {
+    background-color: #E861A4 .3;
+	border-radius: 100px 100px 20px 20px;
+	height: 35px;
+  letter-spacing: 4px;
+	width: 210px;
+  translate: 0px 10px;
+  }
+
+
   .igbtnholder {
     height: 50px;
     width: 65px;
